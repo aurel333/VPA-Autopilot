@@ -8,7 +8,7 @@ The controller deploys a VPA by default for all deployments unless there is anot
 
 It is possible to specify a list of namespaces that will be ignored by the controller by passing a comma separated list to the parameter `excluded-namespaces`. It is also possible to ignore all namespaces matching a label key/value by setting `excluded-namespaces-key` and `excluded-namespaces-value`. These namespaces will not be reconciled at all.
 
-The generated VPAs all have a common label defiled by the parameters `vpa-label-key` and `vpa-label-value` (by default `mks-managed: true`) and only affect the CPU resource to be compatible with JVM workloads.
+The generated VPAs all have a common label defiled by the parameters `vpa-label-key` and `vpa-label-value` (by default `vpa-autopilot-managed: true`) and only affect the CPU resource to be compatible with JVM workloads.
 
 Limitations:
 
