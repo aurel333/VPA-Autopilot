@@ -45,6 +45,7 @@ type HorizontalPodAutoscalerReconciler struct {
 	Scheme *runtime.Scheme
 }
 
+// +kubebuilder:rbac:resources=namespaces,verbs=get;list;watch
 // +kubebuilder:rbac:groups=autoscaling,resources=horizontalpodautoscalers,verbs=get;list;watch
 // +kubebuilder:rbac:groups=autoscaling,resources=horizontalpodautoscalers/status,verbs=get
 

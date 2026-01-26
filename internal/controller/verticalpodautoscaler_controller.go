@@ -42,6 +42,7 @@ type VerticalPodAutoscalerReconciler struct {
 	Scheme *runtime.Scheme
 }
 
+// +kubebuilder:rbac:resources=namespaces,verbs=get;list;watch
 // +kubebuilder:rbac:groups=autoscaling.k8s.io,resources=verticalpodautoscalers,verbs=get;list;watch;create;update;patch;delete
 // +kubebuilder:rbac:groups=autoscaling.k8s.io,resources=verticalpodautoscalers/status,verbs=get;update;patch
 // +kubebuilder:rbac:groups=autoscaling.k8s.io,resources=verticalpodautoscalers/finalizers,verbs=update
