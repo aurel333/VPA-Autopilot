@@ -103,7 +103,7 @@ func main() {
 	flag.Parse()
 
 	switch config.VpaBehaviourString {
-	case "Off", "Auto", "Initial", "Recreate":
+	case string(vpav1.UpdateModeOff), string(vpav1.UpdateModeAuto), string(vpav1.UpdateModeInitial), string(vpav1.UpdateModeRecreate), string(vpav1.UpdateModeInPlaceOrRecreate):
 		config.VpaBehaviourTyped = vpav1.UpdateMode(config.VpaBehaviourString)
 	default:
 		err := fmt.Errorf("Unknown behaviour string: %s", config.VpaBehaviourString)
